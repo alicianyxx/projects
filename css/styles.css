@@ -1,0 +1,113 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #000 url(https://miukimiu.github.io/star-wars-random-quotes/images/bg.jpg);
+}
+
+/* remove button focus */
+button:focus {
+  outline:0 !important;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.header{
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+
+.header__logo {
+  padding-top: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/*------ question styles -------*/
+
+.question {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  /* border: 3px solid blueviolet; */
+  margin-top: 4em;
+}
+
+h2{
+  color: white;
+}
+
+/*------ button styles -------*/
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  /* border: 3px solid green; */
+  margin-top: 4em;
+}
+
+
+#yes:hover {
+  /* letter-spacing: 0.8em; */
+  background-color: #3845ff;
+}
+
+#no:hover {
+  /* letter-spacing: 0.8em; */
+  background-color: #ff3838;
+}
+
+#yes, #no{
+  color: white;
+  text-align: center;
+}
+
+button {
+  height: 4em;
+  width: auto;
+  padding: 1.5em;
+  margin: 1em auto;
+  border: 1px solid yellow;
+  background-color: transparent;
+  border-radius: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  /* transition: all 0.2s cubic-bezier(.4,0,.2,1); */
+}
+
+/*------ image -------*/
+
+.image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+  transform: scale(0.8);
+  /* border: 3px solid pink; */
+}
+
+#lightsaber{
+  width: 85%;
+}

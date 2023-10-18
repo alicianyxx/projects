@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <!-- Particle -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/particle-api-js@8/dist/particle.min.js">
+        </script> 
+        <title> Star Wars </title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="header">
+      <img src="https://miukimiu.github.io/star-wars-random-quotes/images/Star_Wars_Logo.svg" class="header__logo">
+  </div>
+
+  <div class="question">
+    <h2>Is the force with you?</h2>
+  </div>
+
+  <!-- <div class="center">
+      <button id="yes" onclick="saberBlue()">Yesh</button>
+      <button id="no" onclick="saberRed()">Nope</button>
+  </div> -->
+
+  <div class="center">
+    <button id="yes" class="led">Yes I am</button>
+    <button id="no" class="led">No I am not</button>
+  </div>
+
+  <div class="image">
+    <img id= "lightsaber" src="img/lightsaber.png" alt="lightsabers">
+</div>
+
+<!-- script -->
+
+<script src = "jquery.min.js"></script>
+<script type = "text/javascript">
+    $(document).ready(function(){ //when the website is ready, execute this code
+        $(".led").click(function(){ //when click on any button with the led class, execute the function below
+            var p = $(this).attr('id'); //get id value and store in variable p
+            $.get("https://192.168.4.1:80/", (pin:p)); //execute get request
+            
+        });
+    });
+</script>
+
+// <!-- <script> 
+//     //to add the token here 
+//     var myToken = "b6254808994b2e1e280273d96dadcc4221f57f50";
+//     var myDevice = "2e0025000b47363339343638";
+
+//     //particle
+//     var particle = new Particle();
+
+//     var myData;
+
+//     var myNumber; // variable storing numerical data
+
+//     // funtion for the buttons to toggle led strip color
+//     function saberRed(){
+//         particle.callFunction({ deviceId: myDevice, name: "saber", argument: "red", auth: myToken });
+//     }
+
+//     function saberBlue(){
+//         particle.callFunction({ deviceId: myDevice, name: "saber", argument: "blue", auth: myToken });
+//     }
+
+//     function saberColor(){
+//         particle.callFunction({ deviceId: myDevice, name: "saber", argument: "myData", auth: myToken });
+//     }
+
+//     function turnRed(){
+//         myData = "red";
+//         saberRed();
+//     }
+
+//     function turnBlue(){
+//         myData = "blue";
+//         saberBlue();
+//     }
+// </script> -->
+
+</body>
